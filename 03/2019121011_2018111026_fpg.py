@@ -3,6 +3,7 @@
 
 # In[]:
 import numpy as np
+import time
 from copy import deepcopy
 # In[]:
 with open('test.txt', 'r') as fi:
@@ -345,9 +346,14 @@ test_data = dataset
 
 # Using bottom up:
 
+start = time.time()
 fptree = fp_tree(test_data, min_sup)
 # print(fptree.root.visittree())
 frequentwordset = fptree.findfqt()
+end = time.time()
+
+print('Original Algorithm, Time: {}'.format(end-start))
+
 frequentwordset = sorted(frequentwordset, key=lambda k: -k[1])
 
 
@@ -362,9 +368,13 @@ for word in frequentwordset:
 # In[]:
 # Using top down
 
-
+start = time.time()
 fptree = fp_tree_top_down(test_data, min_sup)
 frequentwordset = fptree.findfqt()
+end = time.time()
+
+print('Optimized Algorithm, Time: {}'.format(end-start))
+
 for word in frequentwordset:
     cnt = len(test_data)
     for i in word:
