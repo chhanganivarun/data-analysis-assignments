@@ -6,7 +6,7 @@ import numpy as np
 import time
 from copy import deepcopy
 # In[]:
-dataset_name = 'kosarak_sequences.txt'
+dataset_name = 'SIGN.txt'
 with open(dataset_name, 'r') as fi:
     dataset = fi.readlines()
 dataset = ''.join(dataset)
@@ -340,7 +340,8 @@ class fp_tree:
 
 # In[]:
 print('Dataset: {}'.format(dataset_name))
-min_sup = int(len(dataset)*0.01)
+min_sup = int(len(dataset)*0.5)
+min_sup = 400
 print('Support: {}'.format(min_sup))
 test_data = dataset
 
