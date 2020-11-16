@@ -35,8 +35,8 @@ TEST_DATA_PATH = os.getenv("TEST_DATA_PATH")
 
 
 # # Train and test data paths will be available as env variables during evaluation
-TRAIN_DATA_PATH = './143e2751-7e99-4d17-bb9b-f0faec66e4b9_train.csv'
-TEST_DATA_PATH = './83f63b01-14ae-450d-98cb-328e9467162f_test.csv'
+#TRAIN_DATA_PATH = './143e2751-7e99-4d17-bb9b-f0faec66e4b9_train.csv'
+#TEST_DATA_PATH = './83f63b01-14ae-450d-98cb-328e9467162f_test.csv'
 
 # In[5]:
 
